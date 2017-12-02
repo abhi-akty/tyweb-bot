@@ -47,7 +47,7 @@ Use one of the following commands
 
 
 ''')
-def porn(bot, update):
+def call(bot, update):
 	bot.send_message(chat_id=update.message.chat_id, text="vivek ghodi bn aur shuru ho jaao sb")
 
 dispatcher.add_handler(CommandHandler('start', start, pass_args=True))
@@ -58,6 +58,6 @@ dispatcher.add_handler(CommandHandler('invitelink', invitelink))
 
 dispatcher.add_handler(CommandHandler('help', help))
 
-dispatcher.add_handler(CommandHandler('porn', porn))
+dispatcher.add_handler(CommandHandler('call', call))
 
 updater.start_polling()
