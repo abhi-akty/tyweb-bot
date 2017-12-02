@@ -36,6 +36,13 @@ def invitelink(bot,update):
 
 
 
+def github(bot,update):
+        bot.sendChatAction(chat_id=update.message.chat_id, action=ChatAction.TYPING)
+        sleep(0.2)
+        bot.sendMessage(chat_id=update.message.chat_id, text='Github repo link - https://github.com/abhi-akty/tyweb-bot')
+
+
+
 def help(bot, update):
 	bot.sendChatAction(chat_id=update.message.chat_id, action=ChatAction.TYPING)
 	sleep(0.2)
@@ -44,11 +51,15 @@ Use one of the following commands
 /start - to get a fresh start
 /invitelink - to get an invite link
 /website - to get our official website
+/call - to call members for a match
+/github - for github repo link to contribute
+
+Any kind of suggestions and improvements will be greatly honored.
 
 
 ''')
 def call(bot, update):
-	bot.send_message(chat_id=update.message.chat_id, text="vivek ghodi bn aur shuru ho jaao sb")
+	bot.send_message(chat_id=update.message.chat_id, text="This command will call all users of this group individually for a match(still working on it)")
 
 dispatcher.add_handler(CommandHandler('start', start, pass_args=True))
 
@@ -59,5 +70,7 @@ dispatcher.add_handler(CommandHandler('invitelink', invitelink))
 dispatcher.add_handler(CommandHandler('help', help))
 
 dispatcher.add_handler(CommandHandler('call', call))
+
+dispatcher.add_handler(CommandHandler('github', github))
 
 updater.start_polling()
