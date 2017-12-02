@@ -1,2 +1,2 @@
-*A simple telegram bot* _A simpletelegram bot_
+*A simple telegram bot         * 
 *By Abhishek Tyagi* 
